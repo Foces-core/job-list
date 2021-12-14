@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import {useEffect} from 'react';
 import {getFruits} from '../utils/getFruits';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
     useEffect(()=>{
@@ -8,7 +9,9 @@ export default function Home() {
       },[])
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div>
+            <Navbar/>
+            <div className="hero min-h-screen bg-base-200">
         <div className="text-center hero-content">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">
@@ -21,5 +24,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+        </div>
+        
 )
 }
