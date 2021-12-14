@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import {getFruits} from '../utils/getFruits';
 import Card from '../components/Card';
 
-const Scholarships=()=> {
+const Scholarships=()=> { 
     useEffect(()=>{
       getFruits(); //check the console to see data coming from firebase
     },[])
@@ -12,9 +12,10 @@ const Scholarships=()=> {
         <div className=" hero-content">
           <div className="max-w-3/4">
             <h1 className="text-center mb-5 text-5xl font-bold text-blue-500">
-                  Scholarships
+                  Explore Scholarships
             </h1>
-            <Card></Card>
+            <Card />
+            <Card />
           </div>
         </div>
       </div>
