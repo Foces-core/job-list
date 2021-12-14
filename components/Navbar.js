@@ -45,17 +45,17 @@ export const Navbar = () => {
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto space-x-9'>
-            <Link href='/'>
+            <Link href='/scholarships'>
               <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-medium items-center justify-center hover:text-blue-600'>
                 Scholarships
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/jobs'>
               <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-medium items-center justify-center hover:text-blue-600'>
                 Jobs
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/about'>
               <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-medium items-center justify-center  hover:text-blue-600'>
                 About
               </a>
