@@ -16,7 +16,7 @@ function Card({title, description, deadline, eligibility}) {
                         <p>Eligibility: {eligibility}</p>
                     </div>                
                 </div>
-                <button className="btn bg-blue-100 text-blue-500 border-none">Visit Website</button>
+                <button className="btn  border-none">Visit Website</button>
             </div>
             </div>
       </div>      
