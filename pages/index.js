@@ -4,9 +4,6 @@ import {getFruits} from '../utils/getFruits';
 import Navbar from '../components/Navbar';
 
 export default function Home() {
-    useEffect(()=>{
-        getFruits();
-      },[])
 
     return (
         <div>
