@@ -5,9 +5,6 @@ import Navbar from '../components/Navbar';
 import Welcome from '../components/hero'
 
 export default function Home() {
-    useEffect(()=>{
-        getFruits();
-      },[])
 
     return (
         <div>

@@ -1,7 +1,4 @@
-import styles from '../styles/Home.module.css'
-import {useEffect,useState} from 'react';
-import {getScholar} from '../utils/getScholar';
-import Card from '../components/Card';
+
 import Navbar from '../components/Navbar';
 import Layout from '../components/Layout';
 
