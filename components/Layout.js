@@ -1,38 +1,55 @@
 import React from 'react'
 import Card from './Card';
-import {getScholar} from '../utils/getScholar';
 import { useState,useEffect } from 'react';
-
+import {firestore} from '../utils/firebase';
+import { collection, getDocs } from "firebase/firestore";
+import Scholarships from '../pages/scholarships';
 
 function Layout() {
-    const elements = []
-    const [scholarships,getScholarships] = useState([]);
-    useEffect(()=>{
-        scholarships = getScholar()  
-        
-    scholarships.then((a)=>{
-            return(
-                a.map((r)=>{
-                    // console.log(r);
-                    const name = r.title;
-                    console.log(name);
-                    elements.push(<Card details = {name} />)                   
-                } )
-            )
-            
-        })
-        console.log(elements);
-    })
+    const [scholarships,setScholarships] = useState([]);
+
     
+    useEffect(()=>{
+        const getScholar = async() => {
+            const querySnapshot = await getDocs(collection(firestore, "scholarships"));
+            querySnapshot.forEach((doc) => {
+                // console.log(`${JSON.stringify(doc.data())}`);
+                // console.log(doc.data());  
+                // return(doc.data());
+                var data = doc.data();
+                
+                setScholarships(arr => [...arr , data]);
+                console.log(data);
+            
+            });
+          }
+          getScholar();
+        
+    },[])
     // scholarships.map((scholarship)=>{
     //     console.log(scholarship);
-    // })
-    return (
-        <>
-        {elements}
-        </>
+    // })    
+        return (
+                <div>
+                    {
+                        scholarships.map((scholarship, index)=>((
+                            <Card key={index}
+                            title = {scholarship.title}
+                            description = {scholarship.description}
+                            deadline = {scholarship.deadline}
+                            eligibility = {scholarship.eligibility}
+                            link = {scholarship.link}/>
+                        )))
+                        }
+                    </div>
+                
+                        
+                        
+                
+                
+            
         
-    )
+    );
 }
 
 export default Layout;

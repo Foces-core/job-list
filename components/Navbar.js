@@ -60,7 +60,7 @@ export const Navbar = () => {
                 About
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='https://github.com/Foces-core/job-list/issues'>
               <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-medium items-center justify-center hover:text-blue-600'>
                 Contribute
               </a>
