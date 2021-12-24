@@ -5,18 +5,33 @@ import { useState,useEffect } from 'react';
 
 
 function Layout() {
+    const elements = []
     const [scholarships,getScholarships] = useState([]);
     useEffect(()=>{
-        scholarships = getScholar()
-        console.log(scholarships.get)
+        scholarships = getScholar()  
         
+    scholarships.then((a)=>{
+            return(
+                a.map((r)=>{
+                    // console.log(r);
+                    const name = r.title;
+                    console.log(name);
+                    elements.push(<Card details = {name} />)                   
+                } )
+            )
+            
+        })
+        console.log(elements);
     })
+    
     // scholarships.map((scholarship)=>{
     //     console.log(scholarship);
     // })
-    console.log(scholarships.values)
     return (
-        <Card />
+        <>
+        {elements}
+        </>
+        
     )
 }
 
