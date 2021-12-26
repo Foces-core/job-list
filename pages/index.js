@@ -11,9 +11,9 @@ export default function Home() {
             <Navbar/>
             <div className="hero min-h-screen bg-base-200">
         
-          <div className="max-w-md">
+          
             <Welcome/>
-          </div>
+          
         </div>
       </div>
         
