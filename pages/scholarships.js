@@ -9,7 +9,7 @@ const Scholarships=()=> {
         <div className="hero min-h-screen bg-white-200">
         <div className=" hero-content">
           <div className="max-w-3/4">
-            <h1 className="text-center mb-14 text-5xl font-bold text-blue-500">
+            <h1 className="text-center m-14 text-5xl font-bold text-blue-500 md:text-black">
                   Explore Scholarships
             </h1>
             <Layout />
