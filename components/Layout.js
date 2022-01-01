@@ -18,7 +18,7 @@ function Layout() {
                 // return(doc.data());
                 var data = doc.data();
                 
-                setScholarships(arr => [...arr , data]);
+                setScholarships(arr => [data , ...arr]);
                 console.log(data);
             
             });
@@ -26,6 +26,8 @@ function Layout() {
           getScholar();
         
     },[])
+
+    
     // scholarships.map((scholarship)=>{
     //     console.log(scholarship);
     // })    
