@@ -20,7 +20,7 @@ function Card({title, description, deadline, eligibility,link}) {
                         <p className='font-semibold m-1'>Eligibility: {eligibility}</p>
                     </div>                
                 </div>
-                <a href={link} target='_blank' ><button className="btn  border-none text-blue-600 bg-sky-100">Visit Website</button></a>
+                <a href={link} target='_blank' rel="noreferrer"><button className="btn  border-none text-blue-600 bg-sky-100">Visit Website</button></a>
             </div>
             </div>
       </div>      
