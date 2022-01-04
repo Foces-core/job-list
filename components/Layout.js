@@ -18,7 +18,7 @@ function Layout() {
                 // return(doc.data());
                 var data = doc.data();
                 
-                setScholarships(arr => [...arr , data]);
+                setScholarships(arr => [data , ...arr]);
                 console.log(data);
             
             });
@@ -26,6 +26,8 @@ function Layout() {
           getScholar();
         
     },[])
+
+    
     // scholarships.map((scholarship)=>{
     //     console.log(scholarship);
     // })    
@@ -37,7 +39,8 @@ function Layout() {
                             title = {scholarship.title}
                             description = {scholarship.description}
                             deadline = {scholarship.deadline}
-                            eligibility = {scholarship.eligibility}/>
+                            eligibility = {scholarship.eligibility}
+                            link = {scholarship.link}/>
                         )))
                         }
                     </div>
