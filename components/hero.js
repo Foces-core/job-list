@@ -4,14 +4,17 @@ import Link from 'next/link'
 function Welcome(){
     return(
 <div className="hero min-h-screen bg-base-200">
-  <div className="flex-col hero-content lg:flex-row-reverse">
-    <img src="/homepage.png" className="max-w-sm rounded-lg shadow-2xl" /> 
-    <div>
-      <h1 className="mb-5 text-5xl font-bold">
-            Find Unique career opportunities for college students
+  <div className="flex-col hero-content p-0 lg:flex-row-reverse grid-cols-2 ">
+    <img src="/homepage.png" className="w-2/4 rounded-lg shadow-2xl basis-1/2" /> 
+    <div className="basis-1/2 w-2/4">
+      <h1 className="mb-5 text-5xl font-bold break-all">
+            Find Unique career <br></br>
+            opportunities for college <br></br>
+            students
           </h1> 
       <p className="mb-5">
-      Explore latest scholarships and job opportunities for college students.
+      Explore latest scholarships and job <br></br> 
+      opportunities for college students.
       </p>
             <Link href='/scholarships'>
                    <button id="#scholarships" className="mr-6 btn btn-primary bg-primary">Find Scholarships</button>
