@@ -15,9 +15,9 @@ export const Navbar = () => {
     <>
       <nav className='flex items-center flex-wrap bg-white p-3 '>
         <Link href='/'>
-          <a className='inline-flex items-center p-2 mr-4'>
+          <a className='ml-5 inline-flex items-center p-2 mr-4'>
             
-              <Image src={image} alt="logo" width={240} height={60}/>
+              <Image src={image} alt="logo" width={120} height={30}/>
             
           </a>
         </Link>
