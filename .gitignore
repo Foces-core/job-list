@@ -40,4 +40,4 @@ firebase-debug.log*
 .vercel
 
 launch.json
-.vscode
+/.vscode/
