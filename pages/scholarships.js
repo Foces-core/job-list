@@ -1,10 +1,15 @@
 
 import Navbar from '../components/Navbar';
 import Layout from '../components/Layout';
-
+import Head from 'next/head'
+import Footer from './../components/Footer';
 const Scholarships=()=> { 
     return (
       <>
+      <Head>
+        <title>Scholarfox | Scholarships Page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
         <Navbar />
         <div className="hero min-h-screen bg-white-200">
           <div className=" hero-content">
@@ -16,6 +21,7 @@ const Scholarships=()=> {
             </div>
           </div>
         </div>
+        <Footer/>
         </>
 )
 }
