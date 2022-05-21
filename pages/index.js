@@ -9,14 +9,14 @@ import Footer from '../components/Footer';
 export default function Home() {
 
     return (
-        <div>
+        <div >
             <Head>
         <title>Scholarfox | Home Page</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
             <Navbar/>
             <div className="hero min-h-screen bg-base-200">    
-            <Welcome/>
+            <Welcome />
             
         </div>
         <Footer/>

@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 function JobCard({company,date,email,link,location,position}) {
     return (
-        <div className="card lg:card-side card-bordered shadow-xl mb-7 md:m-7 w-96 md:w-full">
-            <div className="card-body">
+        <div className="card lg:card-side card-bordered shadow-xl mb-7 md:m-7 w-96 md:w-full ">
+            <div className="card-body ">
                 <div className='flex flex-row'>
                     <h2 className="card-title font-bold">{position}</h2> 
                     <span className='text-white bg-green-600 badge p-3 text-tiny text-center ml-3 border-0 rounded-sm'>NEW</span>

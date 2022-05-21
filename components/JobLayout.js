@@ -19,7 +19,7 @@ function JobLayout() {
         getJobs();
     },[])
     return (
-        <div>
+        <div  className="lg:grid grid-cols-2 gap-8 ">
             {
                 jobs.map((job,index) =>((
                     <JobCard key = {index}
