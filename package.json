@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.5.4",
-    "daisyui": "^1.16.4",
+    "daisyui": "^5.7.16",
     "firebase": "^9.23.0",
     "firebase-tools": "^9.23.1",
     "global": "^4.4.0",
