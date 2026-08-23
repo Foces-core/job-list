@@ -2213,10 +2213,10 @@ d@1, d@^1.0.1:
     es5-ext "^0.10.50"
     type "^1.0.1"
 
-daisyui@^1.16.4:
-  version "1.24.3"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-1.24.3.tgz#b91cc3415d59ad529a0d3eabfec1d9797a601a92"
-  integrity sha512-sSIZgy0Q2ObwB7mpsjfb9slhKG6Cec5KpXcwMUmE5EYZ5ZolgCsUK+BuD5zZUY2Ou0lj5qhHGr/BkLLIFbCI2A==
+daisyui@^5.7.20:
+  version "5.7.20"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.7.20.tgz#002ce272df6790c345f3ac4955c5984e44a4201d"
+  integrity sha512-qoL9qXXo/K/MzcteD1SvZOSeBaL8F9qBJvwX3KEpiVHQLzIEtGkNl/ZznSI7J0d+qnQJa2dAAFzTFDAx9df1rw==
 
 damerau-levenshtein@^1.0.7:
   version "1.0.8"
