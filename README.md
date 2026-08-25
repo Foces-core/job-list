@@ -1,45 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Scholarfox
 
-## Getting Started
+Job and scholarship listing web app built with Next.js (pages router) and Firebase Firestore, styled with Tailwind CSS and daisyUI, with light and dark mode through next-themes.
 
-First, run the development server:
+## Pages
+
+| Route | Description |
+| ----- | ----------- |
+| `/` | Home with welcome hero |
+| `/jobs` | Jobs listing |
+| `/scholarships` | Scholarships listing |
+| `/about` | About the project |
+
+Job entries are read live from the Firestore `jobs` collection by `components/JobLayout.js`. Each document carries `company`, `position`, `location`, `date`, `email`, and `link`. Scholarship entries render through `components/Layout.js` and `components/Card.js` with `title`, `description`, `deadline`, `eligibility`, and `link`.
+
+Firestore access goes through `utils/firebase.js`, which reads all config values from environment variables.
+
+## Getting started
+
+Prerequisites: Node.js and a Firebase project with Firestore enabled.
+
+1. Install dependencies:
+
+```bash
+npm install    # or yarn
+```
+
+2. Add your Firebase web app config to `.env.local` in the repo root:
+
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
+
+These values come from the Firebase console under Project settings, General, Your apps.
+
+3. Start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Build and deploy
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The app deploys to Firebase Hosting (project `job-list-acb8e` in `.firebaserc`). `firebase.json` serves the static export from `out/` with clean URLs and SPA rewrites.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run build
+npm run export      # Static export into out/
+firebase deploy     # firebase-tools ships as a dependency
+```
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command | Purpose |
+| ------- | ------- |
+| `npm run dev` | Dev server at http://localhost:3000 |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint through next lint |
+| `npm run export` | Static export to `out/` after a build |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## 🔒 Security
+## Security
 
 This repository uses [gitleaks](https://github.com/gitleaks/gitleaks) for automatic secret scanning on every commit.
 
-### Pre-commit Hook
+### Pre-commit hook
 
 A pre-commit hook is configured to scan for secrets before each commit. This helps prevent accidentally committing sensitive information like:
+
 - API keys
 - Passwords
 - Tokens
@@ -50,14 +84,11 @@ A pre-commit hook is configured to scan for secrets before each commit. This hel
 To enable the pre-commit hook locally:
 
 ```bash
-# Install pre-commit
 pip install pre-commit
-
-# Install hooks
 pre-commit install
 ```
 
-### Bypass (Emergency Only)
+### Bypass (emergency only)
 
 In case of emergency, you can bypass the hook:
 
@@ -65,5 +96,4 @@ In case of emergency, you can bypass the hook:
 git commit --no-verify -m "emergency commit"
 ```
 
-> ⚠️ Only use `--no-verify` in emergency situations. Regular commits should always be scanned.
-
+> Only use `--no-verify` in emergency situations. Regular commits should always be scanned.
