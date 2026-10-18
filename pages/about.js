@@ -12,7 +12,7 @@ export default function About() {
             <Navbar />
             {/* First Card */}
             <div className="md:card md:card-side bg-base-100 md:m-20 md:justify-between items-center rounded-none md:flex-row-reverse p-8">
-            <figure className="card rounded-none" ><img src="/hat-throwing.png" alt="Movie"/></figure>
+            <figure className="card rounded-none" ><img src="/hat-throwing.png" alt="Graduate throwing a cap into the air"/></figure>
             <div className="md:w-1/3 md:pt-40 ">
               <h1 className="text-left md:mb-8 text-2xl font-bold text-blue-500 md:text-black md:text-4xl pt-6 mb-6">About Scholarfox</h1>
               <p className="text-base-content">Scholarfox is here to help college students find scholarships and freshers’ job openings. Students looking for scholarships can browse through a list of relevant programs and search for scholarships of their interest.</p>

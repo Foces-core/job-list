@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "daisyui";
+@custom-variant dark (&:where(.dark, .dark *));
+@source "../pages";
+@source "../components";
 
 @layer utilities {
     .space-x-9 > :not([hidden]) ~ :not([hidden]) {
