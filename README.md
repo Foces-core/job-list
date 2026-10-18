@@ -51,9 +51,8 @@ Open http://localhost:3000 in your browser.
 The app deploys to Firebase Hosting (project `job-list-acb8e` in `.firebaserc`). `firebase.json` serves the static export from `out/` with clean URLs and SPA rewrites.
 
 ```bash
-npm run build
-npm run export      # Static export into out/
-firebase deploy     # firebase-tools ships as a dependency
+pnpm build          # Static export into out/
+pnpm exec firebase deploy
 ```
 
 ## Scripts

@@ -1,0 +1,6 @@
+packages:
+  - .
+overrides:
+  postcss: 8.5.30
+  uuid: 11.1.1
+  '@grpc/grpc-js': 1.14.6
