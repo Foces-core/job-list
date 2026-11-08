@@ -19,7 +19,7 @@
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.3.3",
+    "@tailwindcss/postcss": "4.3.4",
     "eslint": "8.57.1",
     "eslint-config-next": "15.5.27",
     "firebase-tools": "15.34.2"
